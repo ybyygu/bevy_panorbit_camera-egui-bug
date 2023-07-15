@@ -109,7 +109,7 @@ pub fn update_orbit_transform(
         let mut rotation = Quat::from_rotation_y(alpha);
         rotation *= Quat::from_rotation_x(-beta);
 
-        transform.rotation = rotation;
+        transform.rotation *= rotation;
 
         // Update the translation of the camera so we are always rotating 'around'
         // (orbiting) rather than rotating in place

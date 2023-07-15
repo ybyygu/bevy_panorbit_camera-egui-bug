@@ -436,8 +436,8 @@ fn pan_orbit_camera(
                     }
                 };
                 let delta_y = rotation_move.y / win_size.y * PI;
-                pan_orbit.target_alpha -= delta_x;
-                pan_orbit.target_beta += delta_y;
+                pan_orbit.target_alpha = -delta_x;
+                pan_orbit.target_beta = delta_y;
 
                 has_moved = true;
             }
